@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bofa-navy: #012169;
+    --bofa-red: #E31837;
+    --bofa-red-dark: #C41230;
+    --bofa-blue: #0065B3;
+    --bofa-blue-dark: #004E8C;
+    --bofa-ink: #1C1C1C;
+    --bofa-muted: #595959;
+    --bofa-border: #D9DCE1;
+    --bofa-surface: #F4F5F7;
+    --bofa-green: #0B6B3A;
+  }
+
+  html {
+    font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    color: var(--bofa-ink);
+    background-color: #ffffff;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+  }
+
+  input:focus-visible,
+  select:focus-visible,
+  button:focus-visible,
+  a:focus-visible {
+    outline: 2px solid #0065B3;
+    outline-offset: 2px;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.font-mono-code {
+  font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes bofaFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bofa-fade-in {
+  animation: bofaFadeIn 0.22s ease-out both;
+}
